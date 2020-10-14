@@ -1,0 +1,2918 @@
+{
+  "schema": {
+    "type": "object",
+    "properties": {
+      "safetypanel": {
+        "virtualKey": true,
+        "roles": [
+          "Default"
+        ],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "safety": {
+            "schemaRoute": "safety:pagetype",
+            "addable": false,
+            "roles": [
+              "Default"
+            ],
+            "overrideRoles": {
+              "Default": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+              }
+            },
+            "deletable": true,
+            "type": "array",
+            "buttonEvent": "route",
+            "items": {
+              "schemaRoute": "safety:pagetype",
+              "type": "object",
+              "buttonEvent": "route",
+              "properties": {
+                "pagetype": {
+                  "actualName": "PageType",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Exhibit Name",
+                  "type": "string",
+                  "required": false
+                },
+                "parent": {
+                  "actualName": "Parent",
+                  "type": "string"
+                },
+                "entitytimezone": {
+                  "actualName": "EntityTimeZone",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "EntityTimeZone",
+                  "title": "EntityTimeZone",
+                  "type": "string",
+                  "required": false
+                },
+                "level": {
+                  "type": "number"
+                },
+                "createddate": {
+                  "actualName": "CreatedDate",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Created Date",
+                  "type": "string",
+                  "required": false
+                },
+                "entityid": {
+                  "actualName": "EntityID",
+                  "hide": true,
+                  "placeholder": "EntityID",
+                  "title": "EntityID",
+                  "type": "string",
+                  "required": false
+                },
+                "uuid": {
+                  "actualName": "UUID",
+                  "type": "string"
+                },
+                "treeStatus": {
+                  "default": "collapsed",
+                  "type": "string"
+                },
+                "loaded": {
+                  "type": "string"
+                },
+                "createdby": {
+                  "actualName": "CreatedBy",
+                  "hide": true,
+                  "placeholder": "CreatedBy",
+                  "title": "CreatedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "modifieddatetime": {
+                  "actualName": "ModifiedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "ModifiedDateTime",
+                  "title": "ModifiedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "modifiedby": {
+                  "actualName": "ModifiedBy",
+                  "hide": true,
+                  "placeholder": "ModifiedBy",
+                  "title": "ModifiedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "createddatetime": {
+                  "actualName": "CreatedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "CreatedDateTime",
+                  "title": "CreatedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "status": {
+                  "actualName": "Status",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Status",
+                  "type": "string",
+                  "required": false
+                }
+              },
+              "routeOnSelect": true,
+              "primary": false
+            },
+            "routeOnSelect": true,
+            "primary": false
+          },
+          "safetyheader": {
+            "type": "object",
+            "properties": {
+              "addsafetyexhibit": {
+                "actualName": "AddSafetyExhibit",
+                "fxFlex": "0 0 calc(100%)",
+                "hide": false,
+                "schemaRoute": "param1=Safety;",
+                "readonly": false,
+                "operationType": "add",
+                "page": "AddPopupWithoutDropdown",
+                "title": "Add Safety Exhibit",
+                "type": "button",
+                "buttonEvent": "popup",
+                "required": false
+              }
+            }
+          }
+        }
+      },
+      "commentsheader": {
+        "type": "object",
+        "properties": {
+          "copyprevious": {
+            "actualName": "copyPrevious",
+            "fxFlex": "0 0 calc(50% - 10px)",
+            "hide": true,
+            "resultDataPointer": "Comments",
+            "readonly": false,
+            "query": "select * from dailyjournal where parent='param1' order by modifieddatetime desc limt 1",
+            "title": "Copy Previous",
+            "type": "button",
+            "float": "left",
+            "buttonEvent": "copyPrevious",
+            "required": false
+          }
+        }
+      },
+      "environmentpanel": {
+        "virtualKey": true,
+        "roles": [
+          "Default"
+        ],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "environment": {
+            "schemaRoute": "environment:pagetype",
+            "addable": false,
+            "roles": [
+              "Default"
+            ],
+            "overrideRoles": {
+              "Default": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+              }
+            },
+            "deletable": true,
+            "type": "array",
+            "buttonEvent": "route",
+            "items": {
+              "schemaRoute": "environment:pagetype",
+              "type": "object",
+              "buttonEvent": "route",
+              "properties": {
+                "pagetype": {
+                  "actualName": "PageType",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Exhibit Name",
+                  "type": "string",
+                  "required": false
+                },
+                "parent": {
+                  "actualName": "Parent",
+                  "type": "string"
+                },
+                "entitytimezone": {
+                  "actualName": "EntityTimeZone",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "EntityTimeZone",
+                  "title": "EntityTimeZone",
+                  "type": "string",
+                  "required": false
+                },
+                "level": {
+                  "type": "number"
+                },
+                "createddate": {
+                  "actualName": "CreatedDate",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Created Date",
+                  "type": "string",
+                  "required": false
+                },
+                "entityid": {
+                  "actualName": "EntityID",
+                  "hide": true,
+                  "placeholder": "EntityID",
+                  "title": "EntityID",
+                  "type": "string",
+                  "required": false
+                },
+                "uuid": {
+                  "actualName": "UUID",
+                  "type": "string"
+                },
+                "treeStatus": {
+                  "default": "collapsed",
+                  "type": "string"
+                },
+                "loaded": {
+                  "type": "string"
+                },
+                "createdby": {
+                  "actualName": "CreatedBy",
+                  "hide": true,
+                  "placeholder": "CreatedBy",
+                  "title": "CreatedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "modifieddatetime": {
+                  "actualName": "ModifiedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "ModifiedDateTime",
+                  "title": "ModifiedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "modifiedby": {
+                  "actualName": "ModifiedBy",
+                  "hide": true,
+                  "placeholder": "ModifiedBy",
+                  "title": "ModifiedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "createddatetime": {
+                  "actualName": "CreatedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "CreatedDateTime",
+                  "title": "CreatedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "status": {
+                  "actualName": "Status",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Status",
+                  "type": "string",
+                  "required": false
+                }
+              },
+              "routeOnSelect": true,
+              "primary": false
+            },
+            "routeOnSelect": true,
+            "primary": false
+          },
+          "environmentheader": {
+            "type": "object",
+            "properties": {
+              "addenvironmentexhibit": {
+                "actualName": "AddEnvironmentExhibit",
+                "fxFlex": "0 0 calc(100%)",
+                "hide": false,
+                "schemaRoute": "param1=Environment",
+                "readonly": false,
+                "operationType": "add",
+                "page": "AddPopupWithoutDropdown",
+                "title": "Add Environment Exhibit",
+                "type": "button",
+                "buttonEvent": "popup",
+                "required": false
+              }
+            }
+          }
+        }
+      },
+      "comments": {
+        "roles": [
+          "Default"
+        ],
+        "overrideRoles": {
+          "Default": {
+            "read": true,
+            "create": true,
+            "update": true,
+            "delete": true
+          }
+        },
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "parent": {
+            "actualName": "Parent",
+            "type": "string"
+          },
+          "comments": {
+            "actualName": "Comments",
+            "hide": false,
+            "showCount": true,
+            "readonly": false,
+            "defaultValue": "Enter a description of the daily activities",
+            "title": "Comments",
+            "type": "string",
+            "required": false,
+            "maxLength": 2000
+          },
+          "entitytimezone": {
+            "actualName": "EntityTimeZone",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "EntityTimeZone",
+            "title": "EntityTimeZone",
+            "type": "string",
+            "required": false
+          },
+          "createdby": {
+            "actualName": "CreatedBy",
+            "hide": true,
+            "placeholder": "CreatedBy",
+            "title": "CreatedBy",
+            "type": "string",
+            "required": false
+          },
+          "modifieddatetime": {
+            "actualName": "ModifiedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "ModifiedDateTime",
+            "title": "ModifiedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "entityid": {
+            "actualName": "EntityID",
+            "hide": true,
+            "placeholder": "EntityID",
+            "title": "EntityID",
+            "type": "string",
+            "required": false
+          },
+          "modifiedby": {
+            "actualName": "ModifiedBy",
+            "hide": true,
+            "placeholder": "ModifiedBy",
+            "title": "ModifiedBy",
+            "type": "string",
+            "required": false
+          },
+          "createddatetime": {
+            "actualName": "CreatedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "CreatedDateTime",
+            "title": "CreatedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "uuid": {
+            "actualName": "UUID",
+            "type": "string"
+          }
+        },
+        "routeOnSelect": false,
+        "primary": false
+      },
+      "weatherpanel": {
+        "virtualKey": true,
+        "roles": [
+          "Default"
+        ],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "weather": {
+            "addable": false,
+            "inline": true,
+            "roles": [
+              "Default"
+            ],
+            "overrideRoles": {
+              "Default": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+              }
+            },
+            "deletable": true,
+            "type": "array",
+            "buttonEvent": "route",
+            "items": {
+              "type": "object",
+              "buttonEvent": "route",
+              "properties": {
+                "parent": {
+                  "actualName": "Parent",
+                  "type": "string"
+                },
+                "entitytimezone": {
+                  "actualName": "EntityTimeZone",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "EntityTimeZone",
+                  "title": "EntityTimeZone",
+                  "type": "string",
+                  "required": false
+                },
+                "level": {
+                  "type": "number"
+                },
+                "entityid": {
+                  "actualName": "EntityID",
+                  "hide": true,
+                  "placeholder": "EntityID",
+                  "title": "EntityID",
+                  "type": "string",
+                  "required": false
+                },
+                "uuid": {
+                  "actualName": "UUID",
+                  "type": "string"
+                },
+                "treeStatus": {
+                  "default": "collapsed",
+                  "type": "string"
+                },
+                "loaded": {
+                  "type": "string"
+                },
+                "createdby": {
+                  "actualName": "CreatedBy",
+                  "hide": true,
+                  "placeholder": "CreatedBy",
+                  "title": "CreatedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "modifieddatetime": {
+                  "actualName": "ModifiedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "ModifiedDateTime",
+                  "title": "ModifiedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "temperature": {
+                  "actualName": "Temperature",
+                  "hide": false,
+                  "readonly": false,
+                  "metric": "°C",
+                  "uscustomary": "°F",
+                  "title": "Temp",
+                  "type": "number",
+                  "required": false
+                },
+                "modifiedby": {
+                  "actualName": "ModifiedBy",
+                  "hide": true,
+                  "placeholder": "ModifiedBy",
+                  "title": "ModifiedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "comment": {
+                  "actualName": "Comment",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Comment",
+                  "type": "string",
+                  "required": false
+                },
+                "time": {
+                  "actualName": "Time",
+                  "view": "time",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Time",
+                  "type": "string",
+                  "required": false
+                },
+                "createddatetime": {
+                  "actualName": "CreatedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "CreatedDateTime",
+                  "title": "CreatedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "weatherconditions": {
+                  "actualName": "WeatherConditions",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Conditions",
+                  "type": "string",
+                  "required": false,
+                  "enum": [
+                    "Rainy",
+                    "Stormy",
+                    "Sunny",
+                    "Cloudy",
+                    "Hot",
+                    "Cold",
+                    "Dry",
+                    "Wet",
+                    "Windy",
+                    "Hurricanes",
+                    "Typhoons",
+                    "Sand-storms",
+                    "Snow-storms",
+                    "Tornados",
+                    "Humid",
+                    "Foggy",
+                    "Snow",
+                    "Thundersnow",
+                    "Hail",
+                    "Sleet",
+                    "Drought",
+                    "Wildfire",
+                    "Blizzard",
+                    "Avalanche",
+                    "Mist",
+                    "Thunderstorms"
+                  ]
+                },
+                "shutdown": {
+                  "actualName": "Shutdown",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Shutdown",
+                  "type": "boolean",
+                  "required": false
+                }
+              },
+              "routeOnSelect": false,
+              "primary": false
+            },
+            "routeOnSelect": false,
+            "primary": false
+          },
+          "weatherheader": {
+            "type": "object",
+            "properties": {
+              "addweatherevent": {
+                "actualName": "AddWeatherEvent",
+                "fxFlex": "0 0 calc(100%)",
+                "hide": false,
+                "readonly": false,
+                "operationType": "Add",
+                "page": "Weather",
+                "title": "Add Weather Event",
+                "type": "button",
+                "buttonEvent": "inline",
+                "required": false
+              }
+            }
+          }
+        }
+      },
+      "lemspanel": {
+        "virtualKey": true,
+        "roles": [
+          "Default"
+        ],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "lemsheader": {
+            "type": "object",
+            "properties": {
+              "addlem": {
+                "actualName": "AddLEM",
+                "fxFlex": "0 0 calc(100%)",
+                "hide": false,
+                "readonly": false,
+                "operationType": "add",
+                "page": "AddLEM",
+                "title": "Add LEM",
+                "type": "button",
+                "float": "right",
+                "buttonEvent": "routing",
+                "required": false
+              }
+            }
+          },
+          "lems": {
+            "addable": false,
+            "roles": [
+              "Default"
+            ],
+            "overrideRoles": {
+              "Default": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+              }
+            },
+            "query": "LEMS_TABLE_QUERY",
+            "deletable": true,
+            "page": "AddLEM",
+            "type": "array",
+            "buttonEvent": "route",
+            "items": {
+              "query": "LEMS_TABLE_QUERY",
+              "page": "AddLEM",
+              "type": "object",
+              "buttonEvent": "route",
+              "properties": {
+                "parent": {
+                  "actualName": "Parent",
+                  "type": "string"
+                },
+                "entitytimezone": {
+                  "actualName": "EntityTimeZone",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "EntityTimeZone",
+                  "title": "EntityTimeZone",
+                  "type": "string",
+                  "required": false
+                },
+                "level": {
+                  "type": "number"
+                },
+                "lemnumber": {
+                  "actualName": "LemNumber",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Lem #",
+                  "type": "string",
+                  "required": false
+                },
+                "labortotalhours": {
+                  "actualName": "LaborTotalHours",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Labor Hours",
+                  "type": "string",
+                  "required": false
+                },
+                "entityid": {
+                  "actualName": "EntityID",
+                  "hide": true,
+                  "placeholder": "EntityID",
+                  "title": "EntityID",
+                  "type": "string",
+                  "required": false
+                },
+                "uuid": {
+                  "actualName": "UUID",
+                  "type": "string"
+                },
+                "treeStatus": {
+                  "default": "collapsed",
+                  "type": "string"
+                },
+                "loaded": {
+                  "type": "string"
+                },
+                "materialtickets": {
+                  "actualName": "MaterialTickets",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Material Tickets",
+                  "type": "string",
+                  "required": false
+                },
+                "createdby": {
+                  "actualName": "CreatedBy",
+                  "hide": true,
+                  "placeholder": "CreatedBy",
+                  "title": "CreatedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "modifieddatetime": {
+                  "actualName": "ModifiedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "ModifiedDateTime",
+                  "title": "ModifiedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "equipmentcount": {
+                  "actualName": "EquipmentCount",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Equip Count",
+                  "type": "string",
+                  "required": false
+                },
+                "modifiedby": {
+                  "actualName": "ModifiedBy",
+                  "hide": true,
+                  "placeholder": "ModifiedBy",
+                  "title": "ModifiedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "createddatetime": {
+                  "actualName": "CreatedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "CreatedDateTime",
+                  "title": "CreatedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "thirdpartytickets": {
+                  "actualName": "ThirdPartyTickets",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "3rdParty Tickets",
+                  "type": "string",
+                  "required": false
+                },
+                "laborcount": {
+                  "actualName": "LaborCount",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Labor Count",
+                  "type": "string",
+                  "required": false
+                }
+              },
+              "routeOnSelect": true,
+              "primary": false
+            },
+            "routeOnSelect": true,
+            "primary": false
+          }
+        }
+      },
+      "header": {
+        "roles": [],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "parent": {
+            "actualName": "Parent",
+            "type": "string"
+          },
+          "firstname": {
+            "actualName": "FirstName",
+            "hide": false,
+            "readonly": false,
+            "title": "First Name",
+            "type": "string",
+            "sampleValue": "John",
+            "required": false
+          },
+          "projectname": {
+            "actualName": "ProjectName",
+            "hide": true,
+            "readonly": false,
+            "title": "Project Name",
+            "type": "string",
+            "required": false
+          },
+          "entitytimezone": {
+            "actualName": "EntityTimeZone",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "EntityTimeZone",
+            "title": "EntityTimeZone",
+            "type": "string",
+            "required": false
+          },
+          "endtime": {
+            "actualName": "EndTime",
+            "view": "time",
+            "hide": false,
+            "readonly": false,
+            "title": "End Time",
+            "type": "string",
+            "required": false
+          },
+          "entityid": {
+            "actualName": "EntityID",
+            "hide": true,
+            "placeholder": "EntityID",
+            "title": "EntityID",
+            "type": "string",
+            "required": false
+          },
+          "journalcount": {
+            "actualName": "JournalCount",
+            "hide": true,
+            "readonly": false,
+            "query": "JournalCount",
+            "title": "Journal Count",
+            "type": "integer",
+            "sampleValue": 6,
+            "required": false
+          },
+          "starttime": {
+            "actualName": "StartTime",
+            "view": "time",
+            "hide": false,
+            "readonly": false,
+            "title": "Start Time",
+            "type": "string",
+            "required": false
+          },
+          "title": {
+            "actualName": "Title",
+            "hide": true,
+            "readonly": false,
+            "title": "Title",
+            "type": "string",
+            "required": false
+          },
+          "uuid": {
+            "actualName": "UUID",
+            "type": "string"
+          },
+          "journaldate": {
+            "actualName": "JournalDate",
+            "hide": false,
+            "minDate": "Today-90",
+            "readonly": false,
+            "defaultValue": "Today",
+            "format": "date",
+            "maxDate": "Today+1",
+            "title": "Journal Date",
+            "type": "string",
+            "sampleValue": 44039,
+            "required": false
+          },
+          "projectuom": {
+            "actualName": "ProjectUOM",
+            "hide": true,
+            "readonly": true,
+            "title": "Project UoM",
+            "type": "string",
+            "required": false
+          },
+          "lastname": {
+            "actualName": "LastName",
+            "hide": false,
+            "readonly": false,
+            "title": "Last Name",
+            "type": "string",
+            "sampleValue": "Smith",
+            "required": false
+          },
+          "subtypea": {
+            "actualName": "SubTypeA",
+            "hide": false,
+            "readonly": false,
+            "title": "Type",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "Exihbits",
+              "Demolition"
+            ]
+          },
+          "journalnumber": {
+            "actualName": "JournalNumber",
+            "hide": false,
+            "readonly": true,
+            "title": "Journal Number",
+            "type": "string",
+            "required": false
+          },
+          "createdby": {
+            "actualName": "CreatedBy",
+            "hide": true,
+            "placeholder": "CreatedBy",
+            "title": "CreatedBy",
+            "type": "string",
+            "required": false
+          },
+          "modifieddatetime": {
+            "actualName": "ModifiedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "ModifiedDateTime",
+            "title": "ModifiedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "modifiedby": {
+            "actualName": "ModifiedBy",
+            "hide": true,
+            "placeholder": "ModifiedBy",
+            "title": "ModifiedBy",
+            "type": "string",
+            "required": false
+          },
+          "typea": {
+            "actualName": "TypeA",
+            "hide": false,
+            "readonly": false,
+            "title": "Type",
+            "type": "string",
+            "required": false,
+            "conditionalSampleValue": "Construction",
+            "enum": [
+              "Construction",
+              "Fabrication",
+              "Geo"
+            ]
+          },
+          "conditionalhide": {
+            "actualName": "ConditionalHide",
+            "hide": false,
+            "readonly": false,
+            "title": "ConditionField",
+            "type": "string",
+            "required": false
+          },
+          "createddatetime": {
+            "actualName": "CreatedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "CreatedDateTime",
+            "title": "CreatedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "subtypeb": {
+            "actualName": "SubTypeB",
+            "hide": false,
+            "readonly": false,
+            "title": "Type",
+            "type": "string",
+            "required": false,
+            "enum": [
+              "Electrial",
+              "Automation"
+            ]
+          },
+          "subtypec": {
+            "actualName": "SubTypeC",
+            "hide": false,
+            "conditionalEnumServerSide":"true",
+            "conditionalEnum": {
+              "variables": {
+                "AV13": "header.typea"
+              },
+              "formula": "IF(ISBLANK(AV13),\"\",AV13)",
+              "formField": "header.subtypec"
+            },
+            "readonly": false,
+            "type": "string",
+            "required": false
+          }
+        },
+        "routeOnSelect": false,
+        "primary": true
+      },
+      "productionpanel": {
+        "virtualKey": true,
+        "roles": [
+          "Default"
+        ],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "production": {
+            "addable": false,
+            "inline": true,
+            "roles": [
+              "Default"
+            ],
+            "overrideRoles": {
+              "Default": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+              }
+            },
+            "deletable": true,
+            "type": "array",
+            "buttonEvent": "route",
+            "items": {
+              "type": "object",
+              "buttonEvent": "route",
+              "properties": {
+                "parent": {
+                  "actualName": "Parent",
+                  "type": "string"
+                },
+                "activity": {
+                  "actualName": "Activity",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Activity",
+                  "type": "string",
+                  "required": true,
+                  "enum": [
+                    "Access",
+                    "Grade",
+                    "Stringing",
+                    "Hydrovac",
+                    "Piling",
+                    "Concrete",
+                    "Tank 105",
+                    "Tank 106",
+                    "Tank 107",
+                    "MRGAT",
+                    "Indirects",
+                    "Non Billable",
+                    "Silt fencing",
+                    "Ramp construction from local material  wetlands  11m20m Wide",
+                    "Snow fencing",
+                    "Removal of Existing Fencing"
+                  ]
+                },
+                "entitytimezone": {
+                  "actualName": "EntityTimeZone",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "EntityTimeZone",
+                  "title": "EntityTimeZone",
+                  "type": "string",
+                  "required": false
+                },
+                "level": {
+                  "type": "number"
+                },
+                "productiondate": {
+                  "actualName": "ProductionDate",
+                  "hide": true,
+                  "minDate": "Today-90",
+                  "readonly": false,
+                  "defaultValue": "Today",
+                  "format": "date",
+                  "maxDate": "Today+1",
+                  "title": "Date",
+                  "type": "string",
+                  "sampleValue": 44039,
+                  "required": false
+                },
+                "productioncount": {
+                  "actualName": "ProductionCount",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Today",
+                  "type": "number",
+                  "sampleValue": 25,
+                  "required": true
+                },
+                "entityid": {
+                  "actualName": "EntityID",
+                  "hide": true,
+                  "placeholder": "EntityID",
+                  "title": "EntityID",
+                  "type": "string",
+                  "required": false
+                },
+                "uuid": {
+                  "actualName": "UUID",
+                  "type": "string"
+                },
+                "treeStatus": {
+                  "default": "collapsed",
+                  "type": "string"
+                },
+                "loaded": {
+                  "type": "string"
+                },
+                "createdby": {
+                  "actualName": "CreatedBy",
+                  "hide": true,
+                  "placeholder": "CreatedBy",
+                  "title": "CreatedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "modifieddatetime": {
+                  "actualName": "ModifiedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "ModifiedDateTime",
+                  "title": "ModifiedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "workbreakdownstructure": {
+                  "actualName": "WorkBreakdownStructure",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "WBS",
+                  "type": "string",
+                  "required": false,
+                  "enum": [
+                    "1.1.1.1.1",
+                    "2.5.9.9.3",
+                    "1.9.7.8.9",
+                    "6.4.8.5.2",
+                    "1.3.5.9.8",
+                    "1.7.7.1.7",
+                    "5.9.0.7.5",
+                    "8.2.2.2.4",
+                    "7.4.0.3.4",
+                    "5.2.7.4.6",
+                    "3.5.0.9.5",
+                    "6.8.0.7.1",
+                    "AB09867.0.334.563.135",
+                    "AB09867",
+                    "AB09867.0",
+                    "AB09867.0.334"
+                  ]
+                },
+                "modifiedby": {
+                  "actualName": "ModifiedBy",
+                  "hide": true,
+                  "placeholder": "ModifiedBy",
+                  "title": "ModifiedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "comment": {
+                  "actualName": "Comment",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Comment",
+                  "type": "string",
+                  "required": false
+                },
+                "counttotalprevious": {
+                  "actualName": "CountTotalPrevious",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Previous",
+                  "type": "number",
+                  "sampleValue": 75,
+                  "required": false
+                },
+                "conditionalhide": {
+                  "actualName": "ConditionalHide",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Condition Hide",
+                  "type": "string",
+                  "required": false
+                },
+                "typea": {
+                  "actualName": "TypeA",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "Type",
+                  "type": "string",
+                  "required": false,
+                  "conditionalSampleValue": "Construction",
+                  "enum": [
+                    "Construction",
+                    "Fabrication",
+                    "Geo"
+                  ]
+                },
+                "createddatetime": {
+                  "actualName": "CreatedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "CreatedDateTime",
+                  "title": "CreatedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "counttotaltodate": {
+                  "actualName": "CountTotalToDate",
+                  "hide": false,
+                  "readonly": false,
+                  "title": "To Date",
+                  "type": "string",
+                  "required": false
+                },
+                "subtypec": {
+                  "actualName": "SubTypeC",
+                  "hide": false,
+                  "conditionalEnum": {
+                    "variables": {
+                      "AV14": "productionpanel.production[arrayIndex].typea"
+                    },
+                    "formula": "IF(AV14=\"Construction\",CONCATENATE(\"TypeA\",\",\",\"TypeD\"),IF(AV14=\"Geo\",\"TypeC\",\"\"))",
+                    "formField": "productionpanel.production[arrayIndex].subtypec"
+                  },
+                  "readonly": false,
+                  "type": "string",
+                  "required": false
+                }
+              },
+              "routeOnSelect": false,
+              "primary": false
+            },
+            "routeOnSelect": false,
+            "primary": false
+          },
+          "productionheader": {
+            "type": "object",
+            "properties": {
+              "addproduction": {
+                "actualName": "AddProduction",
+                "fxFlex": "0 0 calc(100%)",
+                "hide": false,
+                "readonly": false,
+                "operationType": "add",
+                "title": "Add Production Activity",
+                "type": "button",
+                "float": "left",
+                "buttonEvent": "inline",
+                "required": false
+              },
+              "copyprevious": {
+                "actualName": "copyPrevious",
+                "fxFlex": "0 0 calc(50% - 10px)",
+                "hide": true,
+                "resultDataPointer": "Production",
+                "readonly": false,
+                "query": "select * from dailyjournal where parent='param1' order by modifieddatetime desc limt 1",
+                "title": "Copy Previous",
+                "type": "button",
+                "float": "right",
+                "buttonEvent": "copyPrevious",
+                "required": false
+              }
+            }
+          }
+        }
+      },
+      "gps": {
+        "roles": [
+          "Administrator",
+          "Support",
+          "Welding Inspector",
+          "Inspector",
+          "Coating Inspector",
+          "NDT Inspector",
+          "Senior Inspector",
+          "Chief Inspector",
+          "Office Manager",
+          "Assistant Chief Inspector",
+          "Default"
+        ],
+        "overrideRoles": {
+          "Default": {
+            "read": true,
+            "create": true,
+            "update": true,
+            "delete": true
+          }
+        },
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "parent": {
+            "actualName": "Parent",
+            "type": "string"
+          },
+          "designcatalog": {
+            "actualName": "DesignCatalog",
+            "view": "button",
+            "hide": false,
+            "readonly": false,
+            "operationType": "update",
+            "page": "ApplicationDesignSamples",
+            "title": "Design Catalog Test",
+            "type": "string",
+            "buttonEvent": "routing",
+            "required": false
+          },
+          "entitytimezone": {
+            "actualName": "EntityTimeZone",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "EntityTimeZone",
+            "title": "EntityTimeZone",
+            "type": "string",
+            "required": false
+          },
+          "createdby": {
+            "actualName": "CreatedBy",
+            "hide": true,
+            "placeholder": "CreatedBy",
+            "title": "CreatedBy",
+            "type": "string",
+            "required": false
+          },
+          "modifieddatetime": {
+            "actualName": "ModifiedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "ModifiedDateTime",
+            "title": "ModifiedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "entityid": {
+            "actualName": "EntityID",
+            "hide": true,
+            "placeholder": "EntityID",
+            "title": "EntityID",
+            "type": "string",
+            "required": false
+          },
+          "modifiedby": {
+            "actualName": "ModifiedBy",
+            "hide": true,
+            "placeholder": "ModifiedBy",
+            "title": "ModifiedBy",
+            "type": "string",
+            "required": false
+          },
+          "gps": {
+            "defaultValue": "uuid",
+            "fieldHtmlClass": "btn-md",
+            "title": "Add Location Services",
+            "type": "string",
+            "required": false,
+            "actualName": "GPS",
+            "view": "button",
+            "hide": false,
+            "readonly": false,
+            "operationType": "update",
+            "placeholder": "Add Location Services",
+            "page": "GPS",
+            "buttonEvent": "routing"
+          },
+          "createddatetime": {
+            "actualName": "CreatedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "CreatedDateTime",
+            "title": "CreatedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "uuid": {
+            "actualName": "UUID",
+            "type": "string"
+          }
+        },
+        "routeOnSelect": false,
+        "primary": false
+      },
+      "camera": {
+        "roles": [
+          "Administrator",
+          "Support",
+          "Welding Inspector",
+          "Inspector",
+          "Coating Inspector",
+          "NDT Inspector",
+          "Senior Inspector",
+          "Chief Inspector",
+          "Office Manager",
+          "Assistant Chief Inspector",
+          "Default"
+        ],
+        "overrideRoles": {
+          "Default": {
+            "read": true,
+            "create": true,
+            "update": true,
+            "delete": true
+          }
+        },
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "parent": {
+            "actualName": "Parent",
+            "type": "string"
+          },
+          "images": {
+            "actualName": "Images",
+            "view": "button",
+            "hide": false,
+            "readonly": false,
+            "defaultValue": "uuid",
+            "fieldHtmlClass": "btn-md",
+            "operationType": "update",
+            "page": "Images",
+            "title": "Images",
+            "type": "string",
+            "buttonEvent": "routing",
+            "required": false
+          },
+          "entitytimezone": {
+            "actualName": "EntityTimeZone",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "EntityTimeZone",
+            "title": "EntityTimeZone",
+            "type": "string",
+            "required": false
+          },
+          "createdby": {
+            "actualName": "CreatedBy",
+            "hide": true,
+            "placeholder": "CreatedBy",
+            "title": "CreatedBy",
+            "type": "string",
+            "required": false
+          },
+          "modifieddatetime": {
+            "actualName": "ModifiedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "ModifiedDateTime",
+            "title": "ModifiedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "entityid": {
+            "actualName": "EntityID",
+            "hide": true,
+            "placeholder": "EntityID",
+            "title": "EntityID",
+            "type": "string",
+            "required": false
+          },
+          "modifiedby": {
+            "actualName": "ModifiedBy",
+            "hide": true,
+            "placeholder": "ModifiedBy",
+            "title": "ModifiedBy",
+            "type": "string",
+            "required": false
+          },
+          "createddatetime": {
+            "actualName": "CreatedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "CreatedDateTime",
+            "title": "CreatedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "uuid": {
+            "actualName": "UUID",
+            "type": "string"
+          }
+        },
+        "routeOnSelect": false,
+        "primary": false
+      },
+      "signatures": {
+        "roles": [
+          "Default"
+        ],
+        "overrideRoles": {
+          "Default": {
+            "read": true,
+            "create": true,
+            "update": true,
+            "delete": true
+          }
+        },
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "parent": {
+            "actualName": "Parent",
+            "type": "string"
+          },
+          "entitytimezone": {
+            "actualName": "EntityTimeZone",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "EntityTimeZone",
+            "title": "EntityTimeZone",
+            "type": "string",
+            "required": false
+          },
+          "entityid": {
+            "actualName": "EntityID",
+            "hide": true,
+            "placeholder": "EntityID",
+            "title": "EntityID",
+            "type": "string",
+            "required": false
+          },
+          "inspector": {
+            "actualName": "Inspector",
+            "hide": false,
+            "defaultSort ": "0 0 calc(70% - 10px)",
+            "readonly": false,
+            "title": "Inspector Name",
+            "type": "string",
+            "headerCheckboxable": "0 0 calc(70% - 10px)",
+            "required": false
+          },
+          "uuid": {
+            "actualName": "UUID",
+            "type": "string"
+          },
+          "thirdpartysigndate": {
+            "actualName": "ThirdPartySignDate",
+            "hide": false,
+            "defaultSort ": "0 0 calc(30% - 10px)",
+            "readonly": false,
+            "format": "date",
+            "title": "Date",
+            "type": "date",
+            "headerCheckboxable": "0 0 calc(30% - 10px)",
+            "required": false
+          },
+          "createdby": {
+            "actualName": "CreatedBy",
+            "hide": true,
+            "placeholder": "CreatedBy",
+            "title": "CreatedBy",
+            "type": "string",
+            "required": false
+          },
+          "thirdpartysignature": {
+            "actualName": "ThirdPartySignature",
+            "view": "signature",
+            "hide": false,
+            "defaultSort ": "0 0 calc(100%)",
+            "readonly": false,
+            "setValues": [],
+            "title": "Third Party Signature",
+            "type": "string",
+            "headerCheckboxable": "0 0 calc(100%)",
+            "required": false
+          },
+          "modifieddatetime": {
+            "actualName": "ModifiedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "ModifiedDateTime",
+            "title": "ModifiedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "modifiedby": {
+            "actualName": "ModifiedBy",
+            "hide": true,
+            "placeholder": "ModifiedBy",
+            "title": "ModifiedBy",
+            "type": "string",
+            "required": false
+          },
+          "inspectorsigndate": {
+            "actualName": "InspectorSignDate",
+            "hide": false,
+            "defaultSort ": "0 0 calc(30% - 10px)",
+            "readonly": false,
+            "format": "date",
+            "title": "Date",
+            "type": "date",
+            "headerCheckboxable": "0 0 calc(30% - 10px)",
+            "required": false
+          },
+          "thirdpartyname": {
+            "actualName": "ThirdPartyName",
+            "hide": false,
+            "defaultSort ": "0 0 calc(70% - 10px)",
+            "readonly": false,
+            "title": "Third Party Name",
+            "type": "string",
+            "headerCheckboxable": "0 0 calc(70% - 10px)",
+            "required": false,
+            "conditionalSampleValue": "JP"
+          },
+          "createddatetime": {
+            "actualName": "CreatedDateTime",
+            "hide": true,
+            "format": "date-time",
+            "placeholder": "CreatedDateTime",
+            "title": "CreatedDateTime",
+            "type": "string",
+            "required": false
+          },
+          "inspectorsignature": {
+            "actualName": "InspectorSignature",
+            "view": "signature",
+            "hide": false,
+            "defaultSort ": "0 0 calc(100%)",
+            "readonly": false,
+            "setValues": [],
+            "title": "Inspector Signature",
+            "type": "string",
+            "headerCheckboxable": "0 0 calc(100%)",
+            "required": false
+          }
+        },
+        "routeOnSelect": false,
+        "primary": false
+      },
+      "exhibitspanel": {
+        "virtualKey": true,
+        "roles": [
+          "Default"
+        ],
+        "type": "object",
+        "buttonEvent": "route",
+        "properties": {
+          "exhibits": {
+            "schemaRoute": "exhibits:pagetype",
+            "addable": false,
+            "roles": [
+              "Default"
+            ],
+            "overrideRoles": {
+              "Default": {
+                "read": true,
+                "create": true,
+                "update": true,
+                "delete": true
+              }
+            },
+            "deletable": true,
+            "type": "array",
+            "buttonEvent": "route",
+            "items": {
+              "schemaRoute": "exhibits:pagetype",
+              "type": "object",
+              "buttonEvent": "route",
+              "properties": {
+                "pagetype": {
+                  "actualName": "PageType",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Exhibit Name",
+                  "type": "string",
+                  "required": false
+                },
+                "parent": {
+                  "actualName": "Parent",
+                  "type": "string"
+                },
+                "entitytimezone": {
+                  "actualName": "EntityTimeZone",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "EntityTimeZone",
+                  "title": "EntityTimeZone",
+                  "type": "string",
+                  "required": false
+                },
+                "level": {
+                  "type": "number"
+                },
+                "createddate": {
+                  "actualName": "CreatedDate",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Created Date",
+                  "type": "string",
+                  "required": false
+                },
+                "entityid": {
+                  "actualName": "EntityID",
+                  "hide": true,
+                  "placeholder": "EntityID",
+                  "title": "EntityID",
+                  "type": "string",
+                  "required": false
+                },
+                "uuid": {
+                  "actualName": "UUID",
+                  "type": "string"
+                },
+                "treeStatus": {
+                  "default": "collapsed",
+                  "type": "string"
+                },
+                "loaded": {
+                  "type": "string"
+                },
+                "createdby": {
+                  "actualName": "CreatedBy",
+                  "hide": true,
+                  "placeholder": "CreatedBy",
+                  "title": "CreatedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "modifieddatetime": {
+                  "actualName": "ModifiedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "ModifiedDateTime",
+                  "title": "ModifiedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "modifiedby": {
+                  "actualName": "ModifiedBy",
+                  "hide": true,
+                  "placeholder": "ModifiedBy",
+                  "title": "ModifiedBy",
+                  "type": "string",
+                  "required": false
+                },
+                "createddatetime": {
+                  "actualName": "CreatedDateTime",
+                  "hide": true,
+                  "format": "date-time",
+                  "placeholder": "CreatedDateTime",
+                  "title": "CreatedDateTime",
+                  "type": "string",
+                  "required": false
+                },
+                "status": {
+                  "actualName": "Status",
+                  "hide": false,
+                  "readonly": true,
+                  "title": "Status",
+                  "type": "string",
+                  "required": false
+                }
+              },
+              "routeOnSelect": true,
+              "primary": false
+            },
+            "routeOnSelect": true,
+            "primary": false
+          },
+          "exhibitsheader": {
+            "type": "object",
+            "properties": {
+              "addexhibit": {
+                "actualName": "AddExhibit",
+                "fxFlex": "0 0 calc(100%)",
+                "hide": false,
+                "schemaRoute": "param1=Exhibits",
+                "readonly": false,
+                "operationType": "add",
+                "page": "AddPopup",
+                "title": "Add  Exhibit",
+                "type": "button",
+                "float": "none",
+                "buttonEvent": "popup",
+                "required": false
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "app": "Construction",
+  "roles": [
+    {
+      "role": "Default",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "update": true,
+        "delete": true
+      }
+    },
+    {
+      "role": "Administrator",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "update": true,
+        "delete": true
+      }
+    },
+    {
+      "role": "Support",
+      "permissions": {
+        "read": true,
+        "create": true,
+        "update": true,
+        "delete": true
+      }
+    }
+  ],
+  "formulas": [
+    {
+      "variables": {
+        "Z4": "header.journaldate",
+        "Z12": "header.journalcount",
+        "Z5": "header.firstname",
+        "Z7": "header.lastname"
+      },
+      "formula": "CONCATENATE(Z4,\"-\",Z5,\"-\",Z7,\"-\",RIGHT(CONCATENATE(\"0000\",Z12),4))",
+      "formField": "header.journalnumber"
+    },
+    {
+      "variables": {
+        "Z8": "productionpanel.production[arrayIndex].productioncount",
+        "Z9": "productionpanel.production[arrayIndex].counttotalprevious"
+      },
+      "formula": "SUM(Z8,Z9)",
+      "formField": "productionpanel.production[arrayIndex].counttotaltodate"
+    }
+  ],
+  "unitsOfMeasurement": "project:projectuom",
+  "queries": [
+    {
+      "resultDataPointer": "Production",
+      "sheetName": "Production",
+      "prepopulate": false,
+      "query": "select * from dailyjournal where parent='param1' order by modifieddatetime desc limt 1",
+      "property": "CopyPreviousProduction",
+      "queryParameter": "param1=header:uuid"
+    },
+    {
+      "resultDataPointer": "Comments",
+      "sheetName": "Comments",
+      "prepopulate": false,
+      "query": "select * from dailyjournal where parent='param1' order by modifieddatetime desc limt 1",
+      "property": "CopyPreviousComments",
+      "queryParameter": "param1=header:uuid"
+    },
+    {
+      "sheetName": "Header",
+      "prepopulate": false,
+      "query": "select json_extract(Payload,'$.WDSNumber') as entityname, json_extract(Payload,'$.UUID') as entityid from wds where json_extract(Payload,'$.WeldType')='WPS' or\n json_extract(Payload,'$.WeldType')='param1'",
+      "property": "WDSNumber",
+      "queryParameter": "param1=Header:WeldType"
+    },
+    {
+      "sheetName": "Header",
+      "prepopulate": false,
+      "query": "WeldPass",
+      "property": "TempMin",
+      "samplevalue": 50,
+      "queryParameter": "WeldPass=Root"
+    },
+    {
+      "sheetName": "Header",
+      "prepopulate": false,
+      "query": "WeldPass",
+      "property": "TempMax",
+      "samplevalue": 100,
+      "queryParameter": "WeldPass=Header:TestPass"
+    },
+    {
+      "sheetName": "Header",
+      "prepopulate": true,
+      "query": "select count (*) + 1 as journalcount from dailyjournal where parentEntityId='param1'",
+      "property": "JournalCount",
+      "samplevalue": 5,
+      "queryParameter": "param1=parentEntityId"
+    },
+    {
+      "sheetName": "Weather_Sequence",
+      "prepopulate": false,
+      "query": "select top 1 sequence + 1 from dailyjounrnal where parent='param1' order by seqeunce desc",
+      "property": "Sequence",
+      "queryParameter": "param1=header:uuid"
+    },
+    {
+      "sheetName": "LEMS",
+      "prepopulate": false,
+      "query": "select json_extract(payload,'$.lemnumber') as lemnumber,lem.uuid as uuid, lem.uuid as entityid,lem.parententityid,\nlaborTable.lamborCount as laborcount,\nlaborTable.totalHours as labortotalhours,\nlaborequipment.lamborEquipment as equipmentcount, \nlemmaterial.materialCount as materialtickets,  \nlemthirdparty.thirdPartyCount as thirdpartytickets  \nfrom lem \nleft join (select parent as UI, count(*) as lamborcount ,sum(json_extract(payload,'$.labordtlaborhours') + json_extract(payload,'$.laborstlaborhours') + json_extract(payload,'$.laborotlaborhours')) as totalHours   from lem_labor where parententityid='param1')  laborTable on laborTable.UI=lem.uuid \nleft join (select parent as UI,count(*) as lamborEquipment from lem_equipment where parententityid='param1')  laborequipment on laborequipment.UI=lem.uuid \nleft join (select parent as UI,count(*) as materialcount from lem_material\t where parententityid='param1')  lemmaterial on lemmaterial.UI=lem.uuid \nleft join (select parent as UI,count(*) as thirdpartycount from lem_thirdparty where parententityid='param1')  lemthirdparty on lemthirdparty.UI=lem.uuid \nwhere lem.parententityid='param1'",
+      "property": "LEMS_TABLE_QUERY",
+      "queryParameter": "param1=parentEntityId"
+    }
+  ],
+  "tableName": "dailyjournal",
+  "layout": [
+    {
+      "fxLayoutAlign": "flex-start",
+      "fxLayoutWrap": "wrap",
+      "justify-content": "space-between",
+      "type": "flex",
+      "items": [
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Header",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutAlign": "flex-start",
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "options": {
+                    "sm": "0 0 calc(70% - 10px)"
+                  },
+                  "title": "Journal Number",
+                  "type": "string",
+                  "key": "header.journalnumber"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(30% - 10px)"
+                  },
+                  "title": "Journal Date",
+                  "type": "date",
+                  "key": "header.journaldate"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(70% - 10px)"
+                  },
+                  "title": "First Name",
+                  "type": "string",
+                  "key": "header.firstname"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(30% - 10px)"
+                  },
+                  "title": "Start Time",
+                  "type": "time",
+                  "key": "header.starttime"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(70% - 10px)"
+                  },
+                  "title": "Last Name",
+                  "type": "string",
+                  "key": "header.lastname"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(30% - 10px)"
+                  },
+                  "title": "End Time",
+                  "type": "time",
+                  "key": "header.endtime"
+                },
+                {
+                  "options": {
+                    "md": "0 0 calc(50% - 10px)",
+                    "sm": "0 0 calc(50% - 10px)",
+                    "lg": "0 0 calc(50% - 10px)"
+                  },
+                  "title": "Type",
+                  "type": "enum",
+                  "key": "header.typea"
+                },
+                {
+                  "options": {
+                    "md": "0 0 calc(50% - 10px)",
+                    "sm": "0 0 calc(50% - 10px)",
+                    "lg": "0 0 calc(50% - 10px)"
+                  },
+                  "title": "Type",
+                  "type": "enum",
+                  "key": "header.subtypea"
+                },
+                {
+                  "options": {
+                    "md": "0 0 calc(50% - 10px)",
+                    "sm": "0 0 calc(50% - 10px)",
+                    "lg": "0 0 calc(50% - 10px)"
+                  },
+                  "title": "Type",
+                  "type": "enum",
+                  "key": "header.subtypeb"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(50.0% - 10px)"
+                  },
+                  "type": "enum",
+                  "key": "header.subtypec"
+                },
+                {
+                  "options": {
+                    "md": "0 0 calc(50% - 10px)",
+                    "sm": "0 0 calc(50% - 10px)",
+                    "lg": "0 0 calc(50% - 10px)"
+                  },
+                  "title": "ConditionField",
+                  "type": "string",
+                  "key": "header.conditionalhide"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "headerpanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Weather",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "fxFlex": "0 0 calc(100%)",
+                  "title": "Add Weather Event",
+                  "type": "button",
+                  "key": "weatherpanel.weatherheader.addweatherevent"
+                },
+                {
+                  "listItems": 0,
+                  "type": "table",
+                  "items": [
+                    {
+                      "width": "100",
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Conditions",
+                      "type": "enum",
+                      "key": "weatherpanel.weather[].weatherconditions"
+                    },
+                    {
+                      "width": "80",
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Time",
+                      "type": "time",
+                      "key": "weatherpanel.weather[].time"
+                    },
+                    {
+                      "width": "60",
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Temp",
+                      "type": "number",
+                      "key": "weatherpanel.weather[].temperature"
+                    },
+                    {
+                      "width": "90",
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Shutdown",
+                      "type": "boolean",
+                      "key": "weatherpanel.weather[].shutdown"
+                    },
+                    {
+                      "width": "200",
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Comment",
+                      "type": "string",
+                      "key": "weatherpanel.weather[].comment"
+                    }
+                  ],
+                  "key": "weatherpanel.weather",
+                  "height": "250px"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "weatherpanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Safety",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "fxFlex": "0 0 calc(100%)",
+                  "title": "Add Safety Exhibit",
+                  "type": "button",
+                  "key": "safetypanel.safetyheader.addsafetyexhibit"
+                },
+                {
+                  "listItems": 0,
+                  "type": "table",
+                  "items": [
+                    {
+                      "width": "300",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Exhibit Name",
+                      "type": "string",
+                      "key": "safetypanel.safety[].pagetype"
+                    },
+                    {
+                      "width": "80",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Status",
+                      "type": "string",
+                      "key": "safetypanel.safety[].status"
+                    },
+                    {
+                      "width": "120",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Created Date",
+                      "type": "string",
+                      "key": "safetypanel.safety[].createddate"
+                    }
+                  ],
+                  "key": "safetypanel.safety",
+                  "height": "250px"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "safetypanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Environment",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "fxFlex": "0 0 calc(100%)",
+                  "title": "Add Environment Exhibit",
+                  "type": "button",
+                  "key": "environmentpanel.environmentheader.addenvironmentexhibit"
+                },
+                {
+                  "listItems": 0,
+                  "type": "table",
+                  "items": [
+                    {
+                      "width": "300",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Exhibit Name",
+                      "type": "string",
+                      "key": "environmentpanel.environment[].pagetype"
+                    },
+                    {
+                      "width": "80",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Status",
+                      "type": "string",
+                      "key": "environmentpanel.environment[].status"
+                    },
+                    {
+                      "width": "120",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Created Date",
+                      "type": "string",
+                      "key": "environmentpanel.environment[].createddate"
+                    }
+                  ],
+                  "key": "environmentpanel.environment",
+                  "height": "250px"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "environmentpanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Production",
+          "collapsible": true,
+          "addButton":true,
+          "buttonEvent":"inline",
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "fxFlex": "0 0 calc(100%)",
+                  "title": "Add Production Activity",
+                  "type": "button",
+                  "float": "left",
+                  "key": "productionpanel.productionheader.addproduction"
+                },
+                {
+                  "fxFlex": "0 0 calc(50% - 10px)",
+                  "title": "Copy Previous",
+                  "type": "button",
+                  "float": "right",
+                  "key": "productionpanel.productionheader.copyprevious"
+                },
+                {
+                  "listItems": 0,
+                  "fxLayoutWrap": "wrap",
+                  "type": "array",
+                  "items": [
+                    {
+                      "fxLayoutWrap": "wrap",
+                      "fxLayoutGap": "10px",
+                      "type": "flex",
+                      "items": [
+                        {
+                          "options": {
+                            "md": "0 0 calc(50% - 10px)",
+                            "sm": "0 0 calc(50% - 10px)",
+                            "lg": "0 0 calc(50% - 10px)"
+                          },
+                          "title": "Activity",
+                          "type": "enum",
+                          "key": "productionpanel.production[].activity"
+                        },
+                        {
+                          "options": {
+                            "md": "0 0 calc(50% - 10px)",
+                            "sm": "0 0 calc(50% - 10px)",
+                            "lg": "0 0 calc(50% - 10px)"
+                          },
+                          "title": "WBS",
+                          "type": "enum",
+                          "key": "productionpanel.production[].workbreakdownstructure"
+                        },
+                        {
+                          "options": {
+                            "sm": "0 0 calc(33.0% - 10px)"
+                          },
+                          "title": "Today",
+                          "type": "number",
+                          "key": "productionpanel.production[].productioncount"
+                        },
+                        {
+                          "options": {
+                            "sm": "0 0 calc(33.0% - 10px)"
+                          },
+                          "title": "Previous",
+                          "type": "number",
+                          "key": "productionpanel.production[].counttotalprevious"
+                        },
+                        {
+                          "options": {
+                            "sm": "0 0 calc(33.0% - 10px)"
+                          },
+                          "title": "To Date",
+                          "type": "string",
+                          "key": "productionpanel.production[].counttotaltodate"
+                        },
+                        {
+                          "options": {
+                            "md": "0 0 calc(100% - 10px)",
+                            "sm": "0 0 calc(100% - 10px)",
+                            "lg": "0 0 calc(100% - 10px)"
+                          },
+                          "title": "Comment",
+                          "type": "string",
+                          "key": "productionpanel.production[].comment"
+                        },
+                        {
+                          "options": {
+                            "md": "0 0 calc(100% - 10px)",
+                            "sm": "0 0 calc(100% - 10px)",
+                            "lg": "0 0 calc(100% - 10px)"
+                          },
+                          "title": "Condition Hide",
+                          "type": "string",
+                          "key": "productionpanel.production[].conditionalhide"
+                        },
+                        {
+                          "options": {
+                            "sm": "0 0 calc(33.0% - 10px)"
+                          },
+                          "title": "Type",
+                          "type": "enum",
+                          "key": "productionpanel.production[].typea"
+                        },
+                        {
+                          "options": {
+                            "sm": "0 0 calc(33.0% - 10px)"
+                          },
+                          "type": "enum",
+                          "key": "productionpanel.production[].subtypec"
+                        }
+                      ],
+                      "fxLayout": "row"
+                    }
+                  ],
+                  "key": "productionpanel.production",
+                  "height": "400px"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "productionpanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Exhibits",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "fxFlex": "0 0 calc(100%)",
+                  "title": "Add  Exhibit",
+                  "type": "button",
+                  "float": "none",
+                  "key": "exhibitspanel.exhibitsheader.addexhibit"
+                },
+                {
+                  "listItems": 0,
+                  "type": "table",
+                  "items": [
+                    {
+                      "width": "300",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Exhibit Name",
+                      "type": "string",
+                      "key": "exhibitspanel.exhibits[].pagetype"
+                    },
+                    {
+                      "width": "80",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Status",
+                      "type": "string",
+                      "key": "exhibitspanel.exhibits[].status"
+                    },
+                    {
+                      "width": "120",
+                      "options": {
+                        "sm": "0 0 calc(33.0% - 10px)"
+                      },
+                      "title": "Created Date",
+                      "type": "string",
+                      "key": "exhibitspanel.exhibits[].createddate"
+                    }
+                  ],
+                  "key": "exhibitspanel.exhibits",
+                  "height": "350px"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "exhibitspanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "LEMS",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "fxFlex": "0 0 calc(100%)",
+                  "title": "Add LEM",
+                  "type": "button",
+                  "float": "right",
+                  "key": "lemspanel.lemsheader.addlem"
+                },
+                {
+                  "listItems": 0,
+                  "type": "table",
+                  "items": [
+                    {
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Lem #",
+                      "type": "string",
+                      "key": "lemspanel.lems[].lemnumber"
+                    },
+                    {
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Labor Count",
+                      "type": "string",
+                      "key": "lemspanel.lems[].laborcount"
+                    },
+                    {
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Labor Hours",
+                      "type": "string",
+                      "key": "lemspanel.lems[].labortotalhours"
+                    },
+                    {
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Equip Count",
+                      "type": "string",
+                      "key": "lemspanel.lems[].equipmentcount"
+                    },
+                    {
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "Material Tickets",
+                      "type": "string",
+                      "key": "lemspanel.lems[].materialtickets"
+                    },
+                    {
+                      "options": {
+                        "sm": "0 0 calc(25.0% - 10px)"
+                      },
+                      "title": "3rdParty Tickets",
+                      "type": "string",
+                      "key": "lemspanel.lems[].thirdpartytickets"
+                    }
+                  ],
+                  "key": "lemspanel.lems",
+                  "height": "250px"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "lemspanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "GPS",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "width": "650px",
+                  "options": {
+                    "md": "0 0 calc(100%)",
+                    "sm": "0 0 calc(100%)",
+                    "lg": "0 0 calc(100%)"
+                  },
+                  "title": "Add Location Services",
+                  "type": "button",
+                  "key": "gps.gps"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(33.0% - 10px)"
+                  },
+                  "title": "Design Catalog Test",
+                  "type": "button",
+                  "key": "gps.designcatalog"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "gpspanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Camera",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "width": "650px",
+                  "options": {
+                    "md": "0 0 calc(100%)",
+                    "sm": "0 0 calc(100%)",
+                    "lg": "0 0 calc(100%)"
+                  },
+                  "title": "Images",
+                  "type": "button",
+                  "key": "camera.images"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "camerapanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Comments",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "width": "450px",
+                  "options": {
+                    "md": "0 0 calc(100%)",
+                    "sm": "0 0 calc(100%)",
+                    "lg": "0 0 calc(100%)"
+                  },
+                  "title": "Comments",
+                  "type": "textarea",
+                  "key": "comments.comments"
+                },
+                {
+                  "fxFlex": "0 0 calc(50% - 10px)",
+                  "title": "Copy Previous",
+                  "type": "button",
+                  "float": "left",
+                  "key": "commentsheader.copyprevious"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "commentspanel"
+        },
+        {
+          "fxFlex": "0 0 calc(100%)",
+          "expanded": false,
+          "type": "expansion-panel",
+          "title": "Signatures",
+          "collapsible": true,
+          "items": [
+            {
+              "fxLayoutWrap": "wrap",
+              "fxLayoutGap": "10px",
+              "type": "flex",
+              "items": [
+                {
+                  "options": {
+                    "sm": "0 0 calc(70% - 10px)"
+                  },
+                  "title": "Inspector Name",
+                  "type": "string",
+                  "key": "signatures.inspector"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(30% - 10px)"
+                  },
+                  "title": "Date",
+                  "type": "date",
+                  "key": "signatures.inspectorsigndate"
+                },
+                {
+                  "options": {
+                    "md": "width:450px;",
+                    "sm": "0 0 calc(100%)"
+                  },
+                  "title": "Inspector Signature",
+                  "type": "signature",
+                  "key": "signatures.inspectorsignature"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(70% - 10px)"
+                  },
+                  "title": "Third Party Name",
+                  "type": "string",
+                  "key": "signatures.thirdpartyname"
+                },
+                {
+                  "options": {
+                    "sm": "0 0 calc(30% - 10px)"
+                  },
+                  "title": "Date",
+                  "type": "date",
+                  "key": "signatures.thirdpartysigndate"
+                },
+                {
+                  "options": {
+                    "md": "width:450px;",
+                    "sm": "0 0 calc(100%)"
+                  },
+                  "title": "Third Party Signature",
+                  "type": "signature",
+                  "key": "signatures.thirdpartysignature"
+                }
+              ],
+              "fxLayout": "row"
+            }
+          ],
+          "key": "signaturespanel"
+        }
+      ],
+      "fxLayout": "row"
+    }
+  ],
+  "categoryType": "",
+  "enums": {
+    "reportType": [
+      "Any",
+      "Access Mowing & Fencing",
+      "Assistant Chief Inspector ReportBackfill Inspection ReportBag/Bolt-On Weight Inspection Report",
+      "Bending Inspection Report",
+      "Bores Inspection Report",
+      "Caliper Tool Indication Inspection Report",
+      "Chief Inspector Report",
+      "Clean-up Inspection Report",
+      "Coating Inspection Report",
+      "Construction Report Daily",
+      "Crossing As-Built Inspection Report",
+      "Ditch Inspection Report",
+      "Drive Pile Installation Report",
+      "ELD Inspection Report",
+      "Excavation Inspection Report",
+      "Foreign Facility Crossing As-Built Inspection Report",
+      "General Inspection Report",
+      "Ground Disturbance Inspection Report",
+      "Haul & String Inspection Report",
+      "Horizontal Directional Drilling Inspection Report",
+      "Hydostatic Pressure Test Yield Plot Log",
+      "Hydrotest Inspection Report",
+      "Hydrovac Inspection Report",
+      "Job  Analysis Form",
+      "Lower-In Inspection Report",
+      "Pigging Inspection Report",
+      "Pipeline Inspection/Repair Report",
+      "Scheduled Day Off Report",
+      "Screw Anchor Inspection Report",
+      "Screw Pile Inspection Report",
+      "Stockpile Inspection Report",
+      "Test Lead Inspection Report",
+      "Tie-In Inspection Report",
+      "W-1 Daily Weld Report GMWQPR",
+      "W-1 Daily Weld Report MFCWQPR",
+      "W-1 Daily Weld Report SMWQPR",
+      "W-14 Weld Crack Inv Report",
+      "W-15 Arc Burn Repair",
+      "W-16 Pipe Damage Assessment Report",
+      "W-17 Pipe End Magnetism Report",
+      "W-1M Senior Welder's Summary Report",
+      "W-2 Daily Mainline Weld Report",
+      "W-3 Pipe Quality Report GMPQR",
+      "W-3 Pipe Quality Report SMPOR",
+      "W-4 Daily Repair Welding",
+      "W-5 Tier-in Section Welding Report",
+      "W-6A Tie-In Welding As-Built Report",
+      "W-6B Section Welding As-Built Report",
+      "W-7 Transition Quality Report"
+    ],
+    "TypeB": [
+      "Exihbits",
+      "Demolition"
+    ],
+    "TypeC": [
+      "Electrial",
+      "Automation"
+    ],
+    "TypeD": [
+      "Exihbits",
+      "Demolition",
+      "Electrial",
+      "Automation"
+    ],"Construction": [
+      "Exihbits",
+      "Demolition",
+      "Electrial",
+      "Automation"
+    ],
+    "ProductionActivity": [
+      "Access",
+      "Grade",
+      "Stringing",
+      "Hydrovac",
+      "Piling",
+      "Concrete",
+      "Tank 105",
+      "Tank 106",
+      "Tank 107",
+      "MRGAT",
+      "Indirects",
+      "Non Billable",
+      "Silt fencing",
+      "Ramp construction from local material  wetlands  11m20m Wide",
+      "Snow fencing",
+      "Removal of Existing Fencing"
+    ],
+    "WeatherConditions": [
+      "Rainy",
+      "Stormy",
+      "Sunny",
+      "Cloudy",
+      "Hot",
+      "Cold",
+      "Dry",
+      "Wet",
+      "Windy",
+      "Hurricanes",
+      "Typhoons",
+      "Sand-storms",
+      "Snow-storms",
+      "Tornados",
+      "Humid",
+      "Foggy",
+      "Snow",
+      "Thundersnow",
+      "Hail",
+      "Sleet",
+      "Drought",
+      "Wildfire",
+      "Blizzard",
+      "Avalanche",
+      "Mist",
+      "Thunderstorms"
+    ],
+    "reportCategory": [
+      "Any",
+      "Craft",
+      "General",
+      "Welding",
+      "Management"
+    ],
+    "WBS": [
+      "1.1.1.1.1",
+      "2.5.9.9.3",
+      "1.9.7.8.9",
+      "6.4.8.5.2",
+      "1.3.5.9.8",
+      "1.7.7.1.7",
+      "5.9.0.7.5",
+      "8.2.2.2.4",
+      "7.4.0.3.4",
+      "5.2.7.4.6",
+      "3.5.0.9.5",
+      "6.8.0.7.1",
+      "AB09867.0.334.563.135",
+      "AB09867",
+      "AB09867.0",
+      "AB09867.0.334"
+    ],
+    "reviewStatus": [
+      "Unknown",
+      "Pending",
+      "In Progress",
+      "Deficiency ",
+      "Accepted"
+    ],
+    "weldStatus": [
+      "WQT",
+      "Complete",
+      "Tested",
+      "Inspected",
+      "Approved"
+    ],
+    "Yes-No-NA": [
+      "Yes",
+      "No",
+      "NA"
+    ],
+    "TypeA": [
+      "Construction",
+      "Fabrication",
+      "Geo"
+    ]
+  },
+  "parentPage": "Project",
+  "TableName": "DailyJournal",
+  "pageType": "DailyJournal",
+  "$state": "",
+  "Version": "175",
+  "lockPage": {
+    "review.reviewstatus": "Accepted"
+  },
+  "options": {
+    "submit": true
+  },
+  "readDataFromOtherSource": {
+    "environment": {
+      "fieldMapping": {
+        "pagetype": "environment:type",
+        "createddate": "environment:createddate",
+        "createdby": "environment:createdby",
+        "status": "environment:reviewstatus"
+      },
+      "primaryTable": "Environment"
+    },
+    "safety": {
+      "fieldMapping": {
+        "pagetype": "safety:type",
+        "createddate": "safety:createddate",
+        "createdby": "safety:createdby",
+        "status": "safety:reviewstatus"
+      },
+      "primaryTable": "Safety"
+    },
+    "exhibits": {
+      "fieldMapping": {
+        "pagetype": "exhibit:type",
+        "createddate": "exhibit:createddatetime",
+        "createdby": "exhibit:createdby",
+        "status": "exhibit:reviewstatus"
+      },
+      "primaryTable": "exhibit"
+    },
+    "lems": {
+      "fieldMapping": {},
+      "primaryTable": "AddLEM"
+    }
+  },
+  "page": "DailyJournal",
+  "conditionalFields": [
+    {
+      "variables": {
+        "AV13": "header.typea"
+      },
+      "formula": "IF(AV13=\"Construction\",TRUE,FALSE)",
+      "formField": "header.subtypea"
+    },
+    {
+      "variables": {
+        "AV13": "header.typea"
+      },
+      "formula": "IF(OR(AV13=\"Fabrication\",AV13=\"Geo\"),TRUE,FALSE)",
+      "formField": "header.subtypeb"
+    },
+    {
+      "variables": {
+        "SignaturesAN6": "signatures.thirdpartyname"
+      },
+      "formula": "IF(SignaturesAN6=\"JP\",TRUE,FALSE)",
+      "formField": "header.conditionalhide"
+    },
+    {
+      "variables": {
+        "SignaturesAN6": "signatures.thirdpartyname"
+      },
+      "formula": "IF(SignaturesAN6=\"JP\",TRUE,FALSE)",
+      "formField": "productionpanel.production[arrayIndex].conditionalhide"
+    },
+    {
+      "variables": {
+        "AV14": "productionpanel.production[arrayIndex].typea"
+      },
+      "formula": "IF(NOT(AV14=\"Fabrication\"),TRUE,FALSE)",
+      "formField": "productionpanel.production[arrayIndex].subtypec"
+    }
+  ],
+  "tenant": "All",
+  "breadcrumbDisplayName": "header:journalnumber"
+}

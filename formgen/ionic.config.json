@@ -1,0 +1,7 @@
+{
+  "name": "newform",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
